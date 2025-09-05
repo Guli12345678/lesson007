@@ -34,14 +34,6 @@ const Header = () => {
         >
           Users
         </NavLink>
-        <NavLink
-          className={({ isActive }) =>
-            `uppercase ${isActive ? "text-green-500 underline" : ""}`
-          }
-          to={"/products"}
-        >
-          Products
-        </NavLink>
 
         <NavLink
           className={({ isActive }) =>
