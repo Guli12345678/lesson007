@@ -16,7 +16,7 @@ const Product = () => {
     <div>
       <div className="grid grid-cols-4 container gap-10">
         {data?.products.map((product) => (
-          <div key={product.id}>
+          <div className="shadow-lg rounded bg-white" key={product.id}>
             <div onClick={() => navigate("/products")}>
               <img className="w-[200px]" src={product.images} alt="nothing" />
             </div>

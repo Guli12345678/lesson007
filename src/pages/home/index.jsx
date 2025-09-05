@@ -15,7 +15,7 @@ const Home = () => {
     <div>
       <div className="grid grid-cols-4 container gap-10">
         {data?.products.map((product) => (
-          <div key={product.id}>
+          <div className="shadow-lg rounded bg-white p-5" key={product.id}>
             <div onClick={() => navigate(`/product/${product.id}`)}>
               <img
                 className="w-[200px]"

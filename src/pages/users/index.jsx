@@ -13,7 +13,7 @@ const User = () => {
     <div>
       <div className="grid grid-cols-4 container gap-10">
         {data?.users?.map((user) => (
-          <div key={user.id}>
+          <div className="shadow-lg rounded bg-white p-5" key={user.id}>
             <div onClick={() => navigate(`/user/${user.id}`)}>
               <img className="w-[200px]" src={user.image} alt="nothing" />
             </div>
@@ -24,7 +24,7 @@ const User = () => {
                 <br />
                 <span>
                   <b>Age: </b>
-                  {user.age}{" "}
+                  {user.age}
                 </span>
                 <br />
                 <span>
