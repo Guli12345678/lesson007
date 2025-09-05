@@ -23,6 +23,9 @@ const User = () => {
                 <b className="mr-1">{user.firstName}</b>
                 <b>{user.lastName}</b>
               </h3>
+              <p>Tel: {user.phone}</p>
+              <p>Age: {user.age}</p>
+              <p>username: {user.username}</p>
             </div>
           </div>
         ))}
