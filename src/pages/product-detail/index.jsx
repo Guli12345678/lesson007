@@ -14,7 +14,7 @@ const UserDetail = () => {
 
   return (
     <div>
-      <div className="flex flex-wrap gap-10 container">
+      <div className="flex flex-wrap gap-10 container shadow-lg rounded bg-white mt-10 p-20">
         {data && (
           <div className="flex mt-10 gap-10" key={data.id}>
             <div onClick={() => navigate("/products")}>
@@ -26,6 +26,12 @@ const UserDetail = () => {
                 <b>{data.price}</b>
               </h3>
               <p className="mt-5">{data.description}</p>
+              <div className="flex-row mt-5 gap-10">
+                <button className="bg-amber-400 w-[100px] h-10">Buy now</button>
+                <button className="bg-amber-400 w-[100px] h-10 ml-6">
+                  Save to cart
+                </button>
+              </div>
             </div>
           </div>
         )}

@@ -13,7 +13,6 @@ const Home = () => {
 
   return (
     <div>
-      <h2>Home</h2>
       <div className="grid grid-cols-4 container gap-10">
         {data?.products.map((product) => (
           <div key={product.id}>

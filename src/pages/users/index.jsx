@@ -11,21 +11,26 @@ const User = () => {
 
   return (
     <div>
-      <h2>Home</h2>
-      <div className="flex flex-wrap gap-10 container">
-        {data?.users.map((user) => (
+      <div className="grid grid-cols-4 container gap-10">
+        {data?.users?.map((user) => (
           <div key={user.id}>
-            <div onClick={() => navigate("/users")}>
-              <img src={user.image} alt="" />
+            <div onClick={() => navigate(`/user/${user.id}`)}>
+              <img className="w-[200px]" src={user.image} alt="nothing" />
             </div>
             <div>
               <h3>
                 <b className="mr-1">{user.firstName}</b>
-                <b>{user.lastName}</b>
+                <b className="mr-1">{user.lastName}</b>
+                <br />
+                <span>
+                  <b>Age: </b>
+                  {user.age}{" "}
+                </span>
+                <br />
+                <span>
+                  <b>Username:</b> {user.username}
+                </span>
               </h3>
-              <p>Tel: {user.phone}</p>
-              <p>Age: {user.age}</p>
-              <p>username: {user.username}</p>
             </div>
           </div>
         ))}
